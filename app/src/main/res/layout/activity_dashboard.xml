@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.terrance.screens.dashboard.DashboardActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/header">
+
+
+        <View
+            android:id="@+id/header_background"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#5e3023"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to RandMZer"
+            android:layout_marginTop="85dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="30dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="serif-monospace"
+            android:textStyle="bold"/>
+
+        <ImageButton
+            android:id="@+id/buttonMenu"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/menu"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:contentDescription="Menu" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/source"
+        android:background="#ead2ac"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/header">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/corners"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="30dp"
+            android:elevation="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Let's Randomize!"
+                android:textSize="33dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="200dp"
+                android:fontFamily="serif-monospace"
+                android:layout_marginLeft="50dp"
+                android:gravity="center"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="270dp"
+                android:src="@drawable/camera"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/camera_button"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="←Scan Answer"
+                android:textSize="33dp"
+                android:fontFamily="serif-monospace"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:id="@+id/answerKey"
+                android:layout_below="@id/camera_button"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
